@@ -1,0 +1,32 @@
+.parent{
+    width:100%;
+    height: auto;
+   display: flex;
+  text-align: center;
+  background-color: brown;
+  overflow: auto;
+
+}
+.left{
+    width:20%;
+    height: auto;
+    background-color: black;
+    color: aliceblue;
+    :hover{
+        background-color: orange;
+    }
+  
+
+}
+/* .right{
+    width: 80%;
+    height: 700px;
+    background-color: brown;
+} */
+button{
+    color: aliceblue;
+    height: 40px;
+    width:280px;
+    background-color: chartreuse;
+    font-weight: bolder;
+}

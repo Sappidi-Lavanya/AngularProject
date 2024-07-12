@@ -1,0 +1,39 @@
+.parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    
+
+}
+.left{
+    margin-top: 200px;
+    margin-left: 50px;
+    width:400px;
+    height:280px;
+    background-color: chartreuse;
+    color: aliceblue;
+    font-weight: bolder;
+    padding-top: 45px;
+}
+.right{
+    margin-left: 100px;
+}
+img{
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+h1{
+    color: aliceblue;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

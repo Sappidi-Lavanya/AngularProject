@@ -1,0 +1,18 @@
+<p>data-binding works!</p>
+//interpolation
+<h4>my name is {{name}}</h4>
+<h4>my age is {{age}}</h4>
+//property binding
+<button [disabled]="!isValid">create</button>
+<button [disabled]="!isValided">create</button>
+
+<br>
+//Eventbinding
+<button (click)="submit()">submit</button>
+<br>
+<input type="text" (keydown)="serch()">
+<br>
+//two way data binding
+<label for="">phone</label>
+<input type="text" [(ngModel)]="phone">
+<p>{{phone}}</p>

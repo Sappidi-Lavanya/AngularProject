@@ -1,0 +1,81 @@
+<p>directives works!</p>
+<!-- ngFor -->
+<h2 *ngFor="let age of ages,">Age is {{age }} </h2>
+
+<!-- ngFor with index -->
+<h2 *ngFor="let age of ages,let i=index">Person {{i+1}} age is {{age }} </h2>
+
+<!-- ngFor on elements -->
+ <ul>
+    <li *ngFor="let state of states">{{state}}</li>
+ </ul>
+
+ <label>States :</label>
+ <select name="" id="">
+    <option *ngFor="let state of states" >{{state}}</option>
+ </select>
+
+ <!--  ngFor array of objects -->
+   <h2 *ngFor="let product of products">{{product.name}} is {{product.price}} and its rating is {{product.rating}}</h2>
+
+   <!-- form can be store in objects -->
+   <!-- table can be store in array of object  -->
+
+   <table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+        </tr>
+    </tbody>
+   </table>
+
+<!-- ngIf -->
+
+<button *ngIf="true">Submit</button>
+<button *ngIf="false">Create</button>
+<button *ngIf="true">Cancel</button>
+<button *ngIf="true">Login</button>
+
+<!-- Attribute Directives -->
+ <!-- ngStyle -->
+  <!-- possible for only two conditions terminary operator --
+    \//ngclass for more then two conditions -->
+
+<h4>Attribute Direcctives</h4>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td [ngClass]="{'low': product.price <= 100, 'medium': product.price > 100 && product.price < 10000, 'high': product.price >= 10000}">
+                {{product.price}}
+              </td>
+              <td [ngStyle]="{'color': product.rating < 4 ? 'red' : 'green'}">
+                {{product.rating}}
+              </td>
+              
+        </tr>
+    </tbody>
+   </table>
+
+  
+
+
+
+
