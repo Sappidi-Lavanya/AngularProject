@@ -1,0 +1,51 @@
+<p>accouts works!</p>
+<input type="text" [(ngModel)]="term" placeholder="serch" (keyup)="filter()">
+<select name="" [(ngModel)]="column">
+    <option>city</option>
+    <option>account_name</option>
+</select>
+<select name="" [(ngModel)]="order">
+    <option >asc</option>
+    <option>desc</option>
+</select>
+
+<button (click)="sort()">sort</button>
+<select name="" [(ngModel)]="limit">
+    <option >10</option>
+    <option>20</option>
+    <option>30</option>
+</select>
+<select name="" [(ngModel)]="page">
+    <option >1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="paged()">page</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profile-picture</th>
+            <th>id</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let accout of accounts">
+            <td>{{accout.account_name}}</td>
+            <td>{{accout.available_balance}}</td>
+            <td>{{accout.account_number}}</td>
+            <td>{{accout.city}}</td>
+            <td>
+                <img src="{{accout.profie_picture}}" alt="" width="100px">
+            </td>
+            <td>{{accout.id}}</td>
+            <td>
+                <button (click)="delete(accout.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
