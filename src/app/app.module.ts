@@ -20,6 +20,8 @@ import { AccoutsComponent } from './accouts/accouts.component';
 import { GmailsComponent } from './gmails/gmails.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { VechcleViewComponent } from './vechcle-view/vechcle-view.component';
+import { AccountViewComponent } from './account-view/account-view.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     AccoutsComponent,
     GmailsComponent,
     CreateVehicleComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    VechcleViewComponent,
+    AccountViewComponent
   ],
   imports: [
     BrowserModule,

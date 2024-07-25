@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-create-account',
@@ -17,11 +18,19 @@ export class CreateAccountComponent implements OnInit {
 
   })
 
-  constructor() { }
+  constructor(private _accountsService:AccountsService) { }
 
   ngOnInit(): void {
   }
   submit(){
+    this._accountsService.createAccounts(this.accountForm.value).subscribe(
+      (data:any)=>{
+        alert("created");
+      },
+      (err:any)=>{
+        alert("errorrc")
+      }
+    )
 
   }
 

@@ -15,6 +15,8 @@ import { AccoutsComponent } from './accouts/accouts.component';
 import { GmailsComponent } from './gmails/gmails.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { VechcleViewComponent } from './vechcle-view/vechcle-view.component';
+import { AccountViewComponent } from './account-view/account-view.component';
 
 
 const routes: Routes = [
@@ -32,7 +34,9 @@ const routes: Routes = [
     {path:'act',component:AccoutsComponent},
     {path:'mail',component:GmailsComponent},
     {path:'create',component:CreateVehicleComponent},
-    {path:'created',component:CreateAccountComponent}
+    {path:'created',component:CreateAccountComponent},
+    {path:'vehicle-view/:id',component:VechcleViewComponent},
+    {path:'account_view/:id',component:AccountViewComponent}
   ]},
   {path:'',component:LoginComponent},
 ];

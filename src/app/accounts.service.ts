@@ -23,4 +23,7 @@ export class AccountsService {
   deleteAccounts(id:string):Observable<any>{
 return this._httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/principals/"+id);
   }
+  createAccounts(data:string):Observable<any>{
+    return this._httpClient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",data)
+  }
 }
