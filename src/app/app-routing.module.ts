@@ -17,11 +17,15 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { VechcleViewComponent } from './vechcle-view/vechcle-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { ParentComponent } from './parent/parent.component';
+import { CalculatorrComponent } from './calculatorr/calculatorr.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',canActivate:[AuthenticationGuard],component:DashboardComponent,children:[
     {path:'data',component:DataBindingComponent},
     {path:'cal',component:CalculatorComponent},
     {path:'rect',component:RectangleComponent},
@@ -36,7 +40,17 @@ const routes: Routes = [
     {path:'create',component:CreateVehicleComponent},
     {path:'created',component:CreateAccountComponent},
     {path:'vehicle-view/:id',component:VechcleViewComponent},
-    {path:'account_view/:id',component:AccountViewComponent}
+    {path:'account_view/:id',component:AccountViewComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'calcul',component:CalculatorrComponent},
+    {path:'about',component:AboutCompanyComponent},
+   
+    {
+        path: 'payment',
+        loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
+      }
+    
   ]},
   {path:'',component:LoginComponent},
 ];

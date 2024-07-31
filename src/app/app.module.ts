@@ -22,6 +22,13 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { VechcleViewComponent } from './vechcle-view/vechcle-view.component';
 import { AccountViewComponent } from './account-view/account-view.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { CalculatorrComponent } from './calculatorr/calculatorr.component';
+import { OpertorsComponent } from './opertors/opertors.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -42,14 +49,21 @@ import { AccountViewComponent } from './account-view/account-view.component';
     CreateVehicleComponent,
     CreateAccountComponent,
     VechcleViewComponent,
-    AccountViewComponent
+    AccountViewComponent,
+    ParentComponent,
+    ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    CalculatorrComponent,
+    OpertorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -56,7 +56,7 @@
             <td>
                 <button (click)="delete(vehicle.id)">delete</button>
                 <button routerLink="/dashboard/vehicle-view/{{vehicle.id}}">view</button>
-                <button>edit</button>
+                <button routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">edit</button>
             </td>
         </tr>
     </tbody>

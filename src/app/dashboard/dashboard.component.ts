@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _route:Router) { }
 
   ngOnInit(): void {
+  }
+  logout(){
+    this._route.navigateByUrl("/login")
+    //remove the token
+    sessionStorage.removeItem("my-app");
+
   }
 
 }
